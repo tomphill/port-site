@@ -28,14 +28,7 @@ const IndexPage = () => (
         `} render={props => (
             <div>
                 {props.allWordpressPage.edges.map(page => (
-                    <section id="cv" key={page.node.id.slug='cv'}>
-                        <h1>
-                            {page.node.title}
-                        </h1>
-                        <div dangerouslySetInnerHTML={{__html: page.node.content}} />
-                    </section>
-
-                    <section id="projects" key={page.node.id.slug='projects'}>
+                    <section key={page.node.id}>
                         <h1>
                             {page.node.title}
                         </h1>
